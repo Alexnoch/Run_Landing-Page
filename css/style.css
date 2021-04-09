@@ -6,6 +6,7 @@
 }
 
 *, *:before, *:after {
+  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -78,12 +79,10 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
   font-weight: normal;
 }
-
 * {
   padding: 0px;
   margin: 0px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .wrapper {
@@ -94,7 +93,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: white;
   overflow: hidden;
 }
-
 .wrapper .main-image {
   position: absolute;
   z-index: -1;
@@ -107,37 +105,24 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: flex-end;
+  justify-content: space-between;
   margin-bottom: 195px;
 }
 
 .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
 }
-
 .logo > img {
   max-width: 100%;
 }
 
 .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   white-space: nowrap;
 }
-
 .menu li {
   font-family: "Lato";
   font-weight: 400;
@@ -147,16 +132,13 @@ h1, h2, h3, h4, h5, h6 {
   margin-right: 85px;
   color: black;
 }
-
 .menu li a {
   text-decoration: none;
   color: inherit;
 }
-
 .menu :nth-child(4) {
   color: white;
 }
-
 .menu > :last-child {
   margin-right: 0;
   color: white;
@@ -166,21 +148,18 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   white-space: pre-line;
 }
-
 .slogan h1 {
   font-family: "Montserrat";
   font-weight: 900;
   font-size: 48px;
   line-height: 59px;
 }
-
 .slogan .author {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 32px;
   line-height: 59px;
 }
-
 .slogan .text {
   width: 60%;
   font-family: "Lato";
@@ -190,7 +169,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 22px;
   margin-bottom: 16px;
 }
-
 .slogan .ancor {
   width: 184px;
   height: 62px;
@@ -200,7 +178,6 @@ h1, h2, h3, h4, h5, h6 {
   white-space: wrap;
   margin-bottom: 210px;
 }
-
 .slogan a {
   text-decoration: none;
   font-family: "Lato";
@@ -212,14 +189,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .numbers {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 24px;
 }
-
 .numbers li {
   width: 50px;
   height: 50px;
@@ -227,7 +201,6 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   list-style-type: none;
 }
-
 .numbers li a {
   color: #091020;
   line-height: 50px;
@@ -236,7 +209,6 @@ h1, h2, h3, h4, h5, h6 {
 .numbers > li:hover {
   background-color: #091020;
 }
-
 .numbers > li:hover a {
   color: white;
 }
@@ -252,7 +224,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0px auto;
   padding: 0px 0 66px 0;
 }
-
 .header-block h2 {
   text-align: center;
   font-family: "Lato";
@@ -263,12 +234,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .servis-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin: 0 auto;
 }
 
@@ -281,11 +248,9 @@ h1, h2, h3, h4, h5, h6 {
   white-space: pre-line;
   padding: 27px 65px 52px 65px;
 }
-
 .servis img {
   margin-bottom: 15px;
 }
-
 .servis h4 {
   font-weight: 600;
   font-size: 24px;
@@ -293,7 +258,6 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
   margin-bottom: 20px;
 }
-
 .servis p {
   font-weight: 500;
   font-size: 18px;
@@ -318,7 +282,6 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   margin-bottom: 68px;
 }
-
 .header-block-treiners h2 {
   font-weight: 700;
   color: white;
@@ -326,12 +289,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .trainers-content {
   max-width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .trainers {
@@ -344,20 +303,75 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
   line-height: 22px;
 }
-
 .trainers img {
   max-width: 100%;
 }
-
 .trainers :nth-child(2) {
   padding: 10px 0;
   background-color: #091020;
   font-weight: 600;
   margin-bottom: 20px;
 }
-
 .trainers :nth-child(3) {
   font-weight: 500;
   white-space: pre-line;
 }
-/*# sourceMappingURL=style.css.map */
+
+.wrapper4 {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 45px 0 112px 0;
+}
+
+.header__container-about-us {
+  margin: 0 auto;
+  margin-bottom: 65px;
+}
+.header__container-about-us h2 {
+  text-align: center;
+  font-family: "Lato";
+  font-weight: 700;
+  font-size: 36px;
+  text-transform: uppercase;
+}
+
+.about-us__container {
+  display: flex;
+  flex-direction: column;
+}
+.about-us__container :last-child {
+  margin-bottom: 0;
+}
+
+.about-us__content {
+  width: 55.0847457627%;
+  display: flex;
+  margin-left: auto;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  margin-bottom: 60px;
+}
+.about-us__content p {
+  font-family: "Lato";
+  white-space: pre-line;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+.about-us__content :last-child {
+  margin-bottom: 0;
+}
+
+.about__us_header {
+  display: flex;
+  align-self: center;
+  align-items: flex-end;
+  margin-bottom: 25px;
+}
+.about__us_header h4 {
+  font-family: "Lato";
+  font-size: 24px;
+  font-weight: 700;
+}
