@@ -311,14 +311,32 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 
 .wrapper4{
+    position: relative;
     max-width: 1920px;
     margin: 0 auto;
     padding:45px 0 112px 0;
 }
 
+// .fon-girl{
+//     position: absolute;
+//     z-index: -99;
+//     left:0;
+//     max-width: 100%;
+//     margin-right:100px;
+// }
+.about-us__contant-container{
+    display: flex;
+}
+
+.about-us__main-container{
+    display: flex;
+    flex:0 0 640px;
+    flex-direction: column;
+    align-self: center;
+}
+
 .header__container-about-us{
     margin: 0 auto;
-    margin-bottom: 65px;
 
     h2{
         text-align: center;
@@ -339,8 +357,18 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     }
 }
 
+.fon-girl-container{
+    flex:1 1 100%;
+    margin-right:-200px;
+
+    // img{
+    //     max-width: 100%;
+    // }
+}
+
 .about-us__content{
-    width:55.0847457627%;
+    // width:55.0847457627%;
+    // max-width: 640px;
     display: flex;
     margin-left:auto;
     flex-direction: column;
@@ -372,5 +400,10 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
         font-family: "Lato";
         font-size: 24px;
         font-weight: 700;
+        margin-left: 10px;
     }
 }
+
+// .wrapper5{
+
+// }
