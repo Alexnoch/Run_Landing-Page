@@ -56,9 +56,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 
 .wrapper{
-    // display: flex;
     position: relative;
-    // justify-content: flex-end;
     max-width:1920px;
     margin:0 auto;
     z-index: 90;
@@ -310,29 +308,12 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 }
 
+// Секция 4 -----------------------------
 .wrapper4{
     position: relative;
     max-width: 1920px;
     margin: 0 auto;
     padding:45px 0 112px 0;
-}
-
-// .fon-girl{
-//     position: absolute;
-//     z-index: -99;
-//     left:0;
-//     max-width: 100%;
-//     margin-right:100px;
-// }
-.about-us__contant-container{
-    display: flex;
-}
-
-.about-us__main-container{
-    display: flex;
-    flex:0 0 640px;
-    flex-direction: column;
-    align-self: center;
 }
 
 .header__container-about-us{
@@ -347,25 +328,21 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     }
 }
 
-
-.about-us__container{
+// Главный контейнер с картинкой и текстом
+.about-us__contant-container{
     display: flex;
+    align-items: center;
+}
+
+
+
+//-------ТЕКСТ КОНТЕЙНЕР-----<><><><><><><><><>
+.about-us__main-container{
+    display: flex;
+    flex:0 0 640px;
     flex-direction: column;
-
-    :last-child{
-        margin-bottom: 0;
-    }
+    align-self: center;
 }
-
-.fon-girl-container{
-    flex:1 1 100%;
-    margin-right:-200px;
-
-    // img{
-    //     max-width: 100%;
-    // }
-}
-
 .about-us__content{
     // width:55.0847457627%;
     // max-width: 640px;
@@ -403,7 +380,68 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
         margin-left: 10px;
     }
 }
+// Главный контейнер картинки<<<<<<<<<>>>>>>>>>
+.fon-girl-container{
+    flex:1 1 687px;
+    margin-left:-300px;
 
-// .wrapper5{
+    img{
+        max-width:100%;
+    }
+}
 
-// }
+
+
+
+.wrapper5{
+    max-width: 1920px;
+    position: relative;
+    margin: 0 auto;
+    padding:62px 0 100px 0;
+    background-image: url("../../images/rec.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: auto;
+    
+}
+
+.wrapper5__header{
+    font-family: "Lato";
+    font-weight: 700;
+    font-size: 36px;
+    color:#FAFFFF;
+    text-align: center;
+    margin-bottom:55px;
+}
+
+.reviews-container{
+    display: flex;
+}
+
+.reviews-box{
+    width:25%;
+}
+
+.reviews-text{
+    color:white;
+    border:1px solid white;
+}
+
+.reviews-bottom{
+    display: flex;
+}
+
+.reviews-ava{
+    width:50px;
+    height:50px;
+    background-image: url("../images/woman1.png");
+    background-size: contain;
+}
+
+.reviews-name-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color:white;
+
+}
