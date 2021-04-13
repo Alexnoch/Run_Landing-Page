@@ -6,6 +6,7 @@
 }
 
 *, *:before, *:after {
+  -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
@@ -78,12 +79,10 @@ h1, h2, h3, h4, h5, h6 {
   font-style: normal;
   font-weight: normal;
 }
-
 * {
   padding: 0px;
   margin: 0px;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .wrapper {
@@ -94,7 +93,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: white;
   overflow: hidden;
 }
-
 .wrapper .main-image {
   position: absolute;
   z-index: -1;
@@ -107,56 +105,39 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: flex-end;
+  justify-content: space-between;
   margin-bottom: 195px;
 }
 
 .logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: end;
-      align-self: flex-end;
+  align-self: flex-end;
 }
-
 .logo > img {
   max-width: 100%;
 }
 
 .menu {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   white-space: nowrap;
 }
-
 .menu li {
   font-family: "Lato";
   font-weight: 400;
   font-size: 24px;
   list-style-type: none;
-  color: black;
   margin-right: 85px;
   color: black;
 }
-
 .menu li a {
   text-decoration: none;
   color: inherit;
 }
-
 .menu :nth-child(4) {
   color: white;
 }
-
 .menu > :last-child {
   margin-right: 0;
   color: white;
@@ -166,21 +147,18 @@ h1, h2, h3, h4, h5, h6 {
   width: 100%;
   white-space: pre-line;
 }
-
 .slogan h1 {
   font-family: "Montserrat";
   font-weight: 900;
   font-size: 48px;
   line-height: 59px;
 }
-
 .slogan .author {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 300;
   font-size: 32px;
   line-height: 59px;
 }
-
 .slogan .text {
   width: 60%;
   font-family: "Lato";
@@ -190,7 +168,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 22px;
   margin-bottom: 16px;
 }
-
 .slogan .ancor {
   width: 184px;
   height: 62px;
@@ -200,7 +177,6 @@ h1, h2, h3, h4, h5, h6 {
   white-space: wrap;
   margin-bottom: 210px;
 }
-
 .slogan a {
   text-decoration: none;
   font-family: "Lato";
@@ -212,14 +188,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .numbers {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   font-family: "Montserrat";
   font-weight: 400;
   font-size: 24px;
 }
-
 .numbers li {
   width: 50px;
   height: 50px;
@@ -227,7 +200,6 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   list-style-type: none;
 }
-
 .numbers li a {
   color: #091020;
   line-height: 50px;
@@ -236,7 +208,6 @@ h1, h2, h3, h4, h5, h6 {
 .numbers > li:hover {
   background-color: #091020;
 }
-
 .numbers > li:hover a {
   color: white;
 }
@@ -252,7 +223,6 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0px auto;
   padding: 0px 0 66px 0;
 }
-
 .header-block h2 {
   text-align: center;
   font-family: "Lato";
@@ -263,12 +233,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .servis-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin: 0 auto;
 }
 
@@ -281,11 +247,9 @@ h1, h2, h3, h4, h5, h6 {
   white-space: pre-line;
   padding: 27px 65px 52px 65px;
 }
-
 .servis img {
   margin-bottom: 15px;
 }
-
 .servis h4 {
   font-weight: 600;
   font-size: 24px;
@@ -293,7 +257,6 @@ h1, h2, h3, h4, h5, h6 {
   white-space: nowrap;
   margin-bottom: 20px;
 }
-
 .servis p {
   font-weight: 500;
   font-size: 18px;
@@ -318,7 +281,6 @@ h1, h2, h3, h4, h5, h6 {
   text-transform: uppercase;
   margin-bottom: 68px;
 }
-
 .header-block-treiners h2 {
   font-weight: 700;
   color: white;
@@ -326,12 +288,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .trainers-content {
   max-width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .trainers {
@@ -344,18 +302,15 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 18px;
   line-height: 22px;
 }
-
 .trainers img {
   max-width: 100%;
 }
-
 .trainers :nth-child(2) {
   padding: 10px 0;
   background-color: #091020;
   font-weight: 600;
   margin-bottom: 20px;
 }
-
 .trainers :nth-child(3) {
   font-weight: 500;
   white-space: pre-line;
@@ -365,13 +320,12 @@ h1, h2, h3, h4, h5, h6 {
   position: relative;
   max-width: 1920px;
   margin: 0 auto;
-  padding: 45px 0 112px 0;
+  padding: 45px 0 0 0;
 }
 
 .header__container-about-us {
   margin: 0 auto;
 }
-
 .header__container-about-us h2 {
   text-align: center;
   font-family: "Lato";
@@ -381,45 +335,25 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-us__contant-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 .about-us__main-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 640px;
-          flex: 0 0 640px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-item-align: center;
-      align-self: center;
+  flex: 0 0 640px;
+  flex-direction: column;
+  align-self: center;
 }
 
 .about-us__content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   margin-left: auto;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  flex-direction: column;
+  align-items: flex-end;
   text-align: right;
   margin-bottom: 60px;
 }
-
 .about-us__content p {
   font-family: "Lato";
   white-space: pre-line;
@@ -428,23 +362,16 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 18px;
   margin-bottom: 10px;
 }
-
 .about-us__content :last-child {
   margin-bottom: 0;
 }
 
 .about__us_header {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: center;
-      align-self: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
+  align-self: center;
+  align-items: flex-end;
   margin-bottom: 25px;
 }
-
 .about__us_header h4 {
   font-family: "Lato";
   font-size: 24px;
@@ -453,12 +380,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .fon-girl-container {
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 687px;
-          flex: 1 1 687px;
+  flex: 1 1 687px;
   margin-left: -300px;
 }
-
 .fon-girl-container img {
   max-width: 100%;
 }
@@ -472,6 +396,7 @@ h1, h2, h3, h4, h5, h6 {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: auto;
+  border-bottom: 1px solid white;
 }
 
 .wrapper5__header {
@@ -483,45 +408,127 @@ h1, h2, h3, h4, h5, h6 {
   margin-bottom: 55px;
 }
 
-.reviews-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.section-reviews {
   display: flex;
+  flex-direction: column;
+}
+
+.reviews-container {
+  display: flex;
+  justify-content: space-between;
 }
 
 .reviews-box {
-  width: 25%;
+  max-width: 270px;
 }
 
 .reviews-text {
   color: white;
   border: 1px solid white;
+  padding: 10px 5px;
+  margin-bottom: 18px;
+}
+.reviews-text p {
+  font-family: "Lato";
+  font-weight: 500;
+  font-size: 15px;
+  text-align: center;
 }
 
 .reviews-bottom {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  margin-bottom: 33px;
 }
 
 .reviews-ava {
-  width: 50px;
-  height: 50px;
+  max-width: 100%;
+  flex: 0 0 65px;
   background-image: url("../images/woman1.png");
-  background-size: contain;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
 }
 
 .reviews-name-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
   color: white;
+  margin-left: 3px;
 }
-/*# sourceMappingURL=style.css.map */
+.reviews-name-container :first-child {
+  font-family: "Lato";
+  font-weight: 700;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.reviews-name-container :last-child {
+  display: inline-flex;
+  font-family: "Lato";
+  font-weight: 400px;
+  font-size: 14px;
+  text-align: center;
+  background-color: #091020;
+  color: #27C1E6;
+  line-height: 25px;
+  padding: 0 8px;
+  border-radius: 5px;
+}
+
+.write-reviews {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: flex-end;
+  width: 184px;
+  height: 62px;
+  background-color: #091020;
+  color: #27C1E6;
+}
+.write-reviews a {
+  font-family: "Lato";
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.wrapper6 {
+  max-width: 1920px;
+  margin: 0 auto;
+  background-color: #060F2B;
+  padding: 128px 0;
+}
+
+.contacts-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  padding: 0 250px 80px 250px;
+  border-bottom: 1px solid white;
+}
+
+.contacts-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-family: "Lato";
+}
+.contacts-box img {
+  display: block;
+}
+.contacts-box :first-child {
+  margin-bottom: 10px;
+  font-weight: 500;
+}
+.contacts-box :nth-child(2) {
+  margin-bottom: 10px;
+  font-size: 15px;
+}
+.contacts-box :nth-child(3) {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+.contacts-box :nth-child(4) {
+  font-size: 14px;
+}
