@@ -1,4 +1,5 @@
 // Обнуление 
+@import "default.scss";
 *{
 	padding: 0;
 	margin: 0;
@@ -57,49 +58,103 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 .wrapper{
     position: relative;
-    max-width:1920px;
+    max-width:1950px;
+    padding:10px 15px;
     margin:0 auto;
     z-index: 90;
     background-color:white;
-    overflow: hidden;
+
+    @media(max-width:$mini){
+        padding:5px;
+    }
 
     .main-image{
         position: absolute;
         z-index: -1;
         right:0;
+
+        @media(max-width:1828px){
+            display: none;
+        }
+    }
+}
+
+.menu-burger-container{
+    display:none;
+
+    @media(max-width:$reg){
+        display:flex;
+
     }
 }
 
 .section{
-    width: 1180px;
+    max-width: 1180px;
     margin:0 auto;
 }
 
 .header{
+    position: relative;
     display:flex;
+    max-width:100%;
     align-items: flex-end;
     justify-content: space-between;
     margin-bottom:195px;
+
+    @media(max-width:1828px){
+        margin-bottom: 150px;
+    }
+
+    @media(max-width:$reg){
+        align-items:center;
+        margin-bottom: 50px;
+    }
 }
 
 .logo{
     display: flex;
     align-self: flex-end;
+    flex-shrink: 0;
     >img{
         max-width: 100%;
     }
 }
 
+.hidden-menu-up{
+    margin-top:-400px;
+    position: absolute;
+    top:0;
+    left:50%;
+    font-family: "Lato";
+    color:#a0b3b3;
+    font-size:24px;
+    text-align: center;
+    p{
+        margin-bottom:20px;
+        font-weight: 700;
+    }
+
+}
+
+
 .menu{
     display: flex;
+    flex-basis: 810px;
+    padding-left:200px;
+    flex-shrink: 2;
     white-space: nowrap;
+    justify-content: space-between;
+    box-sizing: content-box;
+
+    @media(max-width:$reg){
+        display: none;
+    }
 
     li{
         font-family: "Lato";
         font-weight: 400;
         font-size: 24px;
         list-style-type: none;
-        margin-right:85px;
         color:black; 
 
         a{
@@ -109,10 +164,17 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     }
     :nth-child(4){
         color:white;
+
+        @media(max-width:1828px){
+            color:black;
+        }
     }
     >:last-child{
         margin-right: 0;
         color:white;
+        @media(max-width:1828px){
+            color:black;
+        }
     }
 }
 
@@ -120,11 +182,24 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     width:100%;
     white-space: pre-line;
 
+    @media(max-width:1828px){
+        text-align: center;
+    }
+
     h1{
         font-family: "Montserrat";
         font-weight: 900;
         font-size: 48px;
         line-height: 59px;
+
+        @media(max-width:$reg){
+            text-align: center;
+        }
+
+        @media(max-width:$mini){
+            font-size:24px;
+            line-height:24px;
+        }
     }
 
     .author{
@@ -135,13 +210,16 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     }
 
     .text{
-        width:60%;
         font-family: "Lato";
         font-weight: 400;
         font-size: 18px;
         white-space: pre-line;
         line-height: 22px;
         margin-bottom:16px;
+
+        @media(max-width:$mini){
+            font-size:14px;
+        }
     }
 
     .ancor{
@@ -152,6 +230,14 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
         text-align:center;
         white-space: wrap;
         margin-bottom: 210px;
+
+        @media(max-width:1828px){
+            margin: 0 auto 100px auto;
+        }
+
+        @media(max-width:$mini){
+            margin-bottom:20px;
+        }
     }
     a{
         text-decoration: none;
@@ -517,7 +603,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .contacts-box{
    display: flex;
    flex-direction: column;
-//    justify-content: space-between;
    align-items: center;
    color:white;
    font-family: "Lato";
