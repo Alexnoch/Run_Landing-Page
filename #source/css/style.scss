@@ -63,6 +63,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     margin:0 auto;
     z-index: 90;
     background-color:white;
+    overflow: hidden;
 
     @media(max-width:$mini){
         padding:5px;
@@ -119,23 +120,43 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
         max-width: 100%;
     }
 }
-
-.hidden-menu-up{
-    margin-top:-400px;
-    position: absolute;
+// Скрытое меню
+.hidden-menu-up-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
     top:0;
-    left:50%;
+    left:0;
+    z-index: 110;
+    width:100vw;
+    height:100vh;
+    background: rgb(49, 49, 49);
+    margin-top:-9900px;
+    
+
+    @media(min-width:993px){
+        margin-top:-9999px!important;
+    }
+}
+.close-menu{
+    width:32px;
+    height:32px;
+    position: absolute;
+    right:45px;
+    top:30px;
+    background-image: url("../../images/close.png");
+}
+.hidden-menu-up{
     font-family: "Lato";
     color:#a0b3b3;
-    font-size:24px;
+    font-size:32px;
     text-align: center;
     p{
-        margin-bottom:20px;
+        margin-bottom:25px;
         font-weight: 700;
     }
-
 }
-
 
 .menu{
     display: flex;
@@ -221,23 +242,24 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
             font-size:14px;
         }
     }
+}
 
-    .ancor{
-        width:184px;
-        height:62px;
-        display: block;
-        background: #091020;
-        text-align:center;
-        white-space: wrap;
-        margin-bottom: 210px;
+.ancor{
+    width:184px;
+    height:62px;
+    display: block;
+    background-color: #091020;
+    text-align:center;
+    white-space: wrap;
+    margin-bottom: 210px;
+    cursor: pointer;
+    
+    @media(max-width:1828px){
+        margin: 0 auto 100px auto;
+    }
 
-        @media(max-width:1828px){
-            margin: 0 auto 100px auto;
-        }
-
-        @media(max-width:$mini){
-            margin-bottom:20px;
-        }
+    @media(max-width:$mini){
+        margin-bottom:20px;
     }
     a{
         text-decoration: none;
@@ -247,8 +269,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
         color:#27C1E6;
         line-height: 62px;
         white-space: wrap;
+        transition: color 5.3s ease;
     }
-   
 }
 
 .numbers{
@@ -263,22 +285,24 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
         text-decoration: none;
         text-align: center;
         list-style-type: none;
+    }
 
-        a{
-            color:#091020;
-            line-height: 50px;
-        }
-
+    a{
+        color:#091020;
+        line-height: 50px;
+        transition: color 1.3s ease 0s;
     }
 }   
 
 .numbers>li:hover{
     background-color:#091020;
+    transition: background-color 0.3s ease 0s;
     a{
         color:white;
+        
     }
 }
-
+// Секция услуги
 .wrapper2{
     max-width:1920px;
     margin:0 auto;
@@ -301,20 +325,34 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 
 .servis-container{
+    max-width:100%;
     display: flex;
     justify-content: space-between;
     margin:0 auto;
+
+    :last-child{
+        margin-right: 0;
+    }
+    @media(max-width:992px){
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 }
 
 .servis{
-    width:370px;
+    flex-basis:370px;
     background-color:#091020;
     color:white;
     font-family: "Lato";
     text-align: center;
     white-space: pre-line;
-    padding:27px 65px 52px 65px;
+    padding:27px 0px 52px 0px;
+    margin-right:25px;
 
+    @media(max-width:992px){
+        margin:5px 0;
+    }
+    
     img{
         margin-bottom:15px;
     }
@@ -332,6 +370,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
         font-size: 18px;
         line-height: 22px;
     }
+
+
 }
 
 // Cекция тренеры
@@ -426,8 +466,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     align-self: center;
 }
 .about-us__content{
-    // width:55.0847457627%;
-    // max-width: 640px;
     display: flex;
     margin-left:auto;
     flex-direction: column;
@@ -482,7 +520,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     background-repeat: no-repeat;
     background-size: auto;
     border-bottom:1px solid white;
-    
 }
 
 .wrapper5__header{
@@ -530,7 +567,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 .reviews-ava{
     max-width:100%;
     flex:0 0 65px;
-    // height:50px;
     background-image: url("../images/woman1.png");
     background-size: cover;
     background-repeat: no-repeat;
@@ -606,8 +642,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
    align-items: center;
    color:white;
    font-family: "Lato";
-  
-
     img{
         display: block;
     }
