@@ -63,7 +63,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     margin:0 auto;
     z-index: 90;
     background-color:white;
-    overflow: hidden;
 
     @media(max-width:$mini){
         padding:5px;
@@ -133,7 +132,6 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     height:100vh;
     background: rgb(49, 49, 49);
     margin-top:-9900px;
-    
 
     @media(min-width:993px){
         margin-top:-9999px!important;
@@ -307,7 +305,11 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     max-width:1920px;
     margin:0 auto;
     background-color:#FAFFFF;
-    padding:90px 0 45px 0;
+    padding:90px 15px 45px 15px;
+
+    @media(max-width:$mini){
+        padding:20px 5px;
+    }
 }
 
 .header-block{
@@ -363,27 +365,37 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
         text-transform: uppercase;
         white-space: nowrap;
         margin-bottom: 20px;
+
+        @media(max-width:$mini){
+            font-size:18px;
+        }
     }
 
     p{
         font-weight: 500;
         font-size: 18px;
         line-height: 22px;
+
+        @media(max-width:$mini){
+            font-size:14px;
+        }
     }
 
 
 }
-
-// Cекция тренеры
-
+// Cекция НАСТАВНИКИ
 .wrapper3{
-    padding:45px 0 41px 0;
+    padding:45px 15px 41px 15px;
     max-width: 1920px;
     margin: 0 auto;
     background-image: url("../images/fon.jpg");
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;
+
+    @media(max-width:$mini){
+        padding:20px 5px;
+    }
 }
 .header-block-treiners{
     margin:0 auto;
@@ -403,10 +415,16 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     max-width:100%;
     display: flex;
     justify-content: space-between;
+    
+
+    @media(max-width:$reg){
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
 }
 
 .trainers{
-    width:363.333333333px;
+    flex-basis:365px;
     border:1px solid rgb(255, 255, 255);
     padding:30px 15px 36px 15px;
     color:white;
@@ -414,6 +432,15 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     font-family: "Lato";
     font-size: 18px;
     line-height: 22px;
+
+    @media(max-width:$mini){
+        
+        font-size:14px;
+    }
+
+    @media(max-width:$reg){
+        margin-bottom: 20px;
+    }
 
     img{
         max-width:100%;
@@ -429,6 +456,11 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     :nth-child(3){
         font-weight: 500;
         white-space: pre-line;
+
+        @media(max-width:$mini){
+            max-width:100%;
+            white-space:unset;
+        }
     }
 
 }
@@ -437,7 +469,11 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     position: relative;
     max-width: 1920px;
     margin: 0 auto;
-    padding:45px 0 0 0;
+    padding:45px 15px 0 15px;
+
+    @media(max-width:$reg){
+        padding:20px 5px 20px 5px;
+    }
 }
 
 .header__container-about-us{
@@ -460,12 +496,20 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
 //-------ТЕКСТ КОНТЕЙНЕР-----<><><><><><><><><>
 .about-us__main-container{
+    max-width: 100%;
     display: flex;
     flex:0 0 640px;
     flex-direction: column;
     align-self: center;
+
+    @media(max-width:$reg){
+        width:100%;
+        margin:0 auto;
+        text-align: center;
+    }
 }
 .about-us__content{
+    width:100%;
     display: flex;
     margin-left:auto;
     flex-direction: column;
@@ -473,6 +517,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     text-align: right;
     margin-bottom: 60px;
 
+    @media(max-width:$reg){
+        text-align: center;
+    }
     p{
         font-family: "Lato";
         white-space: pre-line;
@@ -480,6 +527,11 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
         font-weight: 500;
         line-height: 18px;
         margin-bottom: 10px;
+
+        @media(max-width:$reg){
+            width:100%;
+            white-space: normal;
+        }
     }
 
     :last-child{
@@ -505,21 +557,31 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     flex:1 1 687px;
     margin-left:-300px;
 
+    @media(max-width:1500px){
+        margin-left:-100px;
+    }
+    @media(max-width:$reg){
+        display: none;
+    }
     img{
         max-width:100%;
     }
 }
-// Страница стилей 5 -----------------
+// Страница стилей отзывы
 .wrapper5{
     max-width: 1920px;
     position: relative;
     margin: 0 auto;
-    padding:62px 0 100px 0;
-    background-image: url("../../images/rec.jpg");
+    padding:62px 15px 100px 15px;
+    background-image: url("../images/rec.jpg");
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: auto;
+    background-size: cover;
     border-bottom:1px solid white;
+
+    @media(max-width:$mini){
+        padding:20px 5px;
+    }
 }
 
 .wrapper5__header{
@@ -532,13 +594,21 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 }
 
 .section-reviews{
+    width:100%;
     display: flex;
     flex-direction: column;
 }
 
 .reviews-container{
+    width:100%;
     display: flex;
     justify-content: space-between;
+    
+
+    @media(max-width:$med){
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
 }
 
 .reviews-box{
@@ -613,6 +683,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     background-color: #091020;
     color:#27C1E6;
 
+    @media(max-width:1200px){
+        align-self:center;
+    }
     a{
         font-family: "Lato";
         font-size: 18px;
@@ -625,15 +698,24 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     max-width: 1920px;
     margin: 0 auto;
     background-color: #060F2B;
-    padding:128px 0;
-}
+    padding:128px 15px 0 15px;
 
+    @media(max-width:$mini){
+        padding:30px 5px 25px 5px;
+    }
+}
+.footer{
+    max-width: 100%;
+    display: flex;
+    box-sizing: border-box;
+}
 .contacts-container{
     display: flex;
+    flex-basis: 700px;
     justify-content: space-between;
     margin: 0 auto;
-    padding:0 250px 80px 250px;
     border-bottom:1px solid white;
+    padding-bottom:25px;
 }
 
 .contacts-box{
@@ -642,11 +724,14 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
    align-items: center;
    color:white;
    font-family: "Lato";
-    img{
-        display: block;
-    }
+    
+   @media(max-width:$mini){
+       text-align: center;
+   }
 
     :first-child{
+        width:65px;
+        height:65px;
         margin-bottom: 10px;
         font-weight: 500;
     }
@@ -654,13 +739,23 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     :nth-child(2){
         margin-bottom:10px;
         font-size: 15px;
+
+        @media(max-width:$mini){
+            font-size:12px;
+        }
     }
     :nth-child(3){
         font-size: 14px;
         margin-bottom: 5px;
+        @media(max-width:$mini){
+            font-size:12px;
+        }
     }
     :nth-child(4){
         font-size: 14px;
+        @media(max-width:$mini){
+            font-size:12px;
+        }
     }
 
 }
