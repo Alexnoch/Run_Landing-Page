@@ -62,7 +62,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     padding:10px 15px;
     margin:0 auto;
     z-index: 90;
-    background-color:white;
+    background-color:rgb(255, 255, 255);
+    overflow-y: hidden;
 
     @media(max-width:$mini){
         padding:5px;
@@ -256,8 +257,13 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
         margin: 0 auto 100px auto;
     }
 
+    @media(max-width:$med){
+        margin-bottom: 50px;
+    }
     @media(max-width:$mini){
         margin-bottom:20px;
+        width:124px;
+        height:44px;
     }
     a{
         text-decoration: none;
@@ -268,6 +274,10 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
         line-height: 62px;
         white-space: wrap;
         transition: color 5.3s ease;
+
+        @media(max-width:$mini){
+            line-height: 44px;
+        }
     }
 }
 
@@ -307,6 +317,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     background-color:#FAFFFF;
     padding:90px 15px 45px 15px;
 
+    @media(max-width:$med){
+        padding-top:45px;
+    }
     @media(max-width:$mini){
         padding:20px 5px;
     }
@@ -316,6 +329,10 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     margin:0px auto;
     padding:0px 0 66px 0;
 
+    @media(max-width:$mini){
+        padding-bottom:33px;
+    }
+
     h2{
         text-align: center;
         font-family: "Lato";
@@ -323,6 +340,10 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
         font-size: 36px;
         color: #091020;
         text-transform: uppercase;
+
+        @media(max-width:$mini){
+            font-size:24px;
+        }
     }
 }
 
@@ -353,6 +374,12 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
     @media(max-width:992px){
         margin:5px 0;
+    }
+
+    @media(max-width:$mini){
+        padding:27px 10px 52px 10px;
+        white-space: normal;
+
     }
     
     img{
@@ -394,7 +421,7 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     background-repeat: no-repeat;
 
     @media(max-width:$mini){
-        padding:20px 5px;
+        padding:33px 5px 20px 5px;
     }
 }
 .header-block-treiners{
@@ -404,6 +431,11 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     font-size: 36px;
     text-transform: uppercase;
     margin-bottom: 68px;
+
+    @media(max-width:$mini){
+        font-size: 24px;
+        margin-bottom: 33px;
+    }
 
     h2{
         font-weight: 700;
@@ -433,13 +465,12 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     font-size: 18px;
     line-height: 22px;
 
-    @media(max-width:$mini){
-        
-        font-size:14px;
-    }
-
     @media(max-width:$reg){
         margin-bottom: 20px;
+    }
+    @media(max-width:$mini){   
+        font-size:14px;
+        margin-bottom: 0;
     }
 
     img{
@@ -451,6 +482,10 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
         background-color: #091020;
         font-weight: 600;
         margin-bottom: 20px;
+
+        @media(max-width:$mini){   
+            margin-bottom: 0;
+        }
         
     }
     :nth-child(3){
@@ -474,6 +509,9 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     @media(max-width:$reg){
         padding:20px 5px 20px 5px;
     }
+    @media(max-width:$mini){
+        padding-top:33px;
+    }
 }
 
 .header__container-about-us{
@@ -485,20 +523,29 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
         font-weight: 700;
         font-size: 36px;
         text-transform: uppercase;
+
+        @media(max-width:$mini){
+            font-size: 24px;
+        }
     }
 }
 
 // Главный контейнер с картинкой и текстом
 .about-us__contant-container{
     display: flex;
-    align-items: center;
+    // align-items: center;
+    width: 100%;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: flex-start;
 }
 
 //-------ТЕКСТ КОНТЕЙНЕР-----<><><><><><><><><>
 .about-us__main-container{
-    max-width: 100%;
+    padding-top: 100px;
+    width: 50%;
     display: flex;
-    flex:0 0 640px;
+    flex: 0 2 600px;
     flex-direction: column;
     align-self: center;
 
@@ -507,11 +554,14 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
         margin:0 auto;
         text-align: center;
     }
+    @media(max-width:$mini){
+        padding-top:33px;
+    }
 }
 .about-us__content{
-    width:100%;
+    width: 100%;
     display: flex;
-    margin-left:auto;
+    margin-left: auto;
     flex-direction: column;
     align-items: flex-end;
     text-align: right;
@@ -520,10 +570,14 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     @media(max-width:$reg){
         text-align: center;
     }
+
+    @media(max-width:$mini){
+        padding:0 10px;
+        margin-bottom: 25px;
+    }
     p{
         font-family: "Lato";
-        white-space: pre-line;
-        font-size: 15px;
+        font-size: 14px;
         font-weight: 500;
         line-height: 18px;
         margin-bottom: 10px;
@@ -536,26 +590,36 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
 
     :last-child{
         margin-bottom: 0;
-    }
-   
+    } 
 }
 .about__us_header{
     display: flex;
     align-self:center;
     align-items: flex-end;
     margin-bottom: 25px;
+
+    @media(max-width:$mini){
+        flex-direction: column;
+        align-items: center;
+    }
     
     h4{
         font-family: "Lato";
         font-size: 24px;
         font-weight: 700;
         margin-left: 10px;
+
+        @media(max-width:$mini){
+            font-size: 18px;
+        }
     }
 }
 // Главный контейнер картинки<<<<<<<<<>>>>>>>>>
 .fon-girl-container{
-    flex:1 1 687px;
-    margin-left:-300px;
+    display: flex;
+    flex-basis: 590px;
+    flex-shrink: 0;
+    flex-grow: 1;
 
     @media(max-width:1500px){
         margin-left:-100px;
@@ -564,7 +628,8 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
         display: none;
     }
     img{
-        max-width:100%;
+        max-width: 100%;
+        margin-left: -100px;
     }
 }
 // Страница стилей отзывы
@@ -591,6 +656,13 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     color:#FAFFFF;
     text-align: center;
     margin-bottom:55px;
+    text-transform: uppercase;
+
+    
+    @media(max-width:$mini){
+        font-size: 24px;
+        margin-bottom: 33px;
+    }
 }
 
 .section-reviews{
@@ -686,10 +758,18 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     @media(max-width:1200px){
         align-self:center;
     }
+    @media(max-width:$mini){
+        width:124px;
+        height:44px;
+    }
     a{
         font-family: "Lato";
         font-size: 18px;
         font-weight: 400;
+
+        @media(max-width:$mini){
+            font-size: 14px;
+        }
     }
 }
 
@@ -716,46 +796,52 @@ h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight: 400;}
     margin: 0 auto;
     border-bottom:1px solid white;
     padding-bottom:25px;
+    color: white;
+    text-align: center;
 }
 
 .contacts-box{
    display: flex;
    flex-direction: column;
    align-items: center;
+   width:100%;
    color:white;
    font-family: "Lato";
+   line-height: 17px;
     
    @media(max-width:$mini){
        text-align: center;
+       font-size: 12px;
    }
 
+   >:first-child{
+       width:65px;
+       height:65px;
+
+       @media(max-width:$mini){
+           width:32px;
+           height:32px;
+       }
+   }
+
+   >:nth-child(2){
+       padding-bottom:10px;
+   }
+
+   >img{
+       padding-bottom:5px;
+   }
+}
+
+.contacts-box-social-box{
+    display: flex;
+    align-items: flex-start;
+
     :first-child{
-        width:65px;
-        height:65px;
-        margin-bottom: 10px;
-        font-weight: 500;
+        margin-right:10px;
     }
 
-    :nth-child(2){
-        margin-bottom:10px;
-        font-size: 15px;
-
-        @media(max-width:$mini){
-            font-size:12px;
-        }
-    }
-    :nth-child(3){
-        font-size: 14px;
-        margin-bottom: 5px;
-        @media(max-width:$mini){
-            font-size:12px;
-        }
-    }
-    :nth-child(4){
-        font-size: 14px;
-        @media(max-width:$mini){
-            font-size:12px;
-        }
-    }
-
+}
+.contacts-box-padding{
+    padding-bottom:5px;
 }
